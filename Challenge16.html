@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Comparison Table</title>
+    <style>
+        .comparison-table {
+            background-color: aqua;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            min-width: 500px;
+            border-collapse: collapse;
+            border: 1px solid salmon;
+        }
+        
+        thead {
+            background-color: #ffe0b2;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        td:nth-child(3),
+        th:nth-child(3) {
+            background-color: #d1ffd6;
+        }
+        
+        th, td {
+            border: 1px solid salmon;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section class="comparison-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Features</th>
+                    <th>Basic</th>
+                    <th>Pro</th>
+                    <th>Enterprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Users</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>10GB</td>
+                    <td>100GB</td>
+                    <td>1TB</td>
+                </tr>
+                <tr>
+                    <td>Support</td>
+                    <td>Email</td>
+                    <td>Email + Chat</td>
+                    <td>24/7 Phone & Email</td>
+                </tr>
+                <tr>
+                    <td>Custom Reports</td>
+                    <td>✗</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

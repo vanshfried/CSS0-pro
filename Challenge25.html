@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Step Form</title>
+  <style>
+    /* You'll add CSS */
+    /* Base Styles */
+body {
+  font-family: sans-serif;
+  background: #f1f1f1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.multi-step-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: relative;
+}
+
+/* Hide all steps by default */
+.step {
+  display: none;
+  animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Step visibility rules */
+#step1:checked ~ .step-1,
+#step2:checked ~ .step-2,
+#step3:checked ~ .step-3 {
+  display: block;
+}
+
+/* Form elements */
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Button-like labels */
+.next-btn,
+.back-btn {
+  background: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.back-btn {
+  background: #7f8c8d;
+}
+
+/* Actual submit button */
+button[type="submit"] {
+  background: green;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+
+  <form class="multi-step-form">
+
+    <!-- Step 1 Radio -->
+    <input type="radio" name="step" id="step1" checked hidden>
+    <input type="radio" name="step" id="step2" hidden>
+    <input type="radio" name="step" id="step3" hidden>
+
+    <!-- Step 1 -->
+    <div class="step step-1">
+      <label for="name">What’s your name?</label>
+      <input type="text" id="name" />
+      <label for="step2" class="next-btn">Next →</label>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step step-2">
+      <label for="email">What’s your email?</label>
+      <input type="email" id="email" />
+      <div class="buttons">
+        <label for="step1" class="back-btn">← Back</label>
+        <label for="step3" class="next-btn">Next →</label>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step step-3">
+      <p>✅ Thanks! You're ready to submit.</p>
+      <div class="buttons">
+        <label for="step2" class="back-btn">← Back</label>
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+
+  </form>
+
+</body>
+</html>

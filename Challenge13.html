@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessible CSS Accordion</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .accordion {
+      display: grid;
+      gap: 10px;
+      padding: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .accordion-item {
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #e0f7fa;
+      border: 1px solid #b2ebf2;
+    }
+
+    /* Hide radio buttons */
+    .accordion-item input[type="radio"] {
+      display: none;
+    }
+
+    .accordion-header {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #00bcd4;
+      color: white;
+      font-weight: bold;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .accordion-header:focus {
+      outline: 3px solid #ffcc00;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 15px;
+      background: #ffffff;
+    }
+
+    .accordion-item input:checked ~ .accordion-content {
+      max-height: 300px; /* adjust as needed */
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="accordion">
+
+    <div class="accordion-item">
+      <input type="radio" name="accordion" id="acc1" checked>
+      <label class="accordion-header" for="acc1" role="button" aria-expanded="true" aria-controls="panel1" id="label1">Section 1</label>
+      <div class="accordion-content" id="panel1" role="region" aria-labelledby="label1">
+        <p>This is the content for Section 1.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <input type="radio" name="accordion" id="acc2">
+      <label class="accordion-header" for="acc2" role="button" aria-expanded="false" aria-controls="panel2" id="label2">Section 2</label>
+      <div class="accordion-content" id="panel2" role="region" aria-labelledby="label2">
+        <p>This is the content for Section 2.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <input type="radio" name="accordion" id="acc3">
+      <label class="accordion-header" for="acc3" role="button" aria-expanded="false" aria-controls="panel3" id="label3">Section 3</label>
+      <div class="accordion-content" id="panel3" role="region" aria-labelledby="label3">
+        <p>This is the content for Section 3.</p>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>

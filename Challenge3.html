@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Model Challenge</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .box {
+      margin: 15px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .box-padding {
+      background-color: #c8f7c5;
+      padding: 30px;
+    }
+
+    .box-margin {
+      background-color: #f7cac9;
+      margin: 40px 0;
+    }
+
+    .box-border {
+      background-color: #d5f4e6;
+      border: 5px dashed teal;
+      border-radius: 10px;
+    }
+
+    .box-sizing-demo {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .content-box, .border-box {
+      width: 48%;
+      background-color: #ffebcd;
+      padding: 20px;
+      border: 2px solid black;
+    }
+
+    .content-box {
+      box-sizing: content-box;
+    }
+
+    .border-box {
+      box-sizing: border-box;
+    }
+
+    .card-shadow {
+      background-color: #fff3cd;
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    code {
+      background-color: #d82727;
+      padding: 2px 4px;
+      font-size: 13px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CSS Box Model Challenge</h1>
+
+    <div class="box box-padding">
+      <p>This box has <strong>padding</strong> – content is pushed away from the border.</p>
+    </div>
+
+    <div class="box box-margin">
+      <p>This box has <strong>margin</strong> – it’s pushed away from other elements.</p>
+    </div>
+
+    <div class="box box-border">
+      <p>This box has a <strong>styled border</strong> with a rounded corner.</p>
+    </div>
+
+    <div class="box-sizing-demo">
+      <div class="box content-box">
+        <p><code>box-sizing: content-box</code></p>
+      </div>
+      <div class="box border-box">
+        <p><code>box-sizing: border-box</code></p>
+      </div>
+    </div>
+
+    <div class="box card-shadow">
+      <p>This card has a <strong>box-shadow</strong> for a lifted look.</p>
+    </div>
+  </div>
+</body>
+</html>

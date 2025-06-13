@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 5: Layout Fundamentals (Flexbox Intro)</title>
+    <style>
+        .features{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            box-sizing: border-box;
+            max-width: 800px;
+            margin: auto;
+        }
+        .card{
+            text-align: center;
+            padding: 5px;
+            margin: 10px;
+             transition: all 0.8s ease;
+        }
+        
+        .card:nth-child(1){
+            background-color: red;
+            border-radius: 15px;
+        }
+        .card:nth-child(1):hover{
+            background-color: #ff9900;
+            box-shadow: 2px 2px rgb(0, 255, 0);
+            
+        }
+        .card:nth-child(2){
+            background-color: rgb(4, 182, 236);
+            border-radius: 10px;
+        }
+        .card:nth-child(2):hover{
+            background-color: greenyellow;
+            box-shadow: 2px 2px rgb(251, 152, 152);
+            
+        }
+        .card:nth-child(3){
+            background-color: purple;
+            border-radius: 25px;
+        }
+        .card:nth-child(3):hover{
+            background-color: wheat;
+            box-shadow: 2px 2px rgb(0, 255, 0);
+            
+        }
+
+        @media screen and (max-width : 500px) {
+            .features{
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="features">
+      <div class="card">
+        <h2>Fast</h2>
+        <p>Our app loads in milliseconds with zero lag.</p>
+      </div>
+      <div class="card">
+        <h2>Responsive</h2>
+        <p>Looks great on mobile, tablet, and desktop.</p>
+      </div>
+      <div class="card">
+        <h2>Accessible</h2>
+        <p>Keyboard navigation and screen-reader friendly.</p>
+      </div>
+    </section>
+</body>
+</html>

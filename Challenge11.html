@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Challenge 11 - Stylish Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+
+    .card {
+      max-width: 350px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      margin: 0;
+      color: #333;
+    }
+
+    .card-description {
+      font-size: 1em;
+      color: #666;
+    }
+
+    .card-btn {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+    }
+
+    .card-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 500px) {
+      .card {
+        width: 100%;
+        margin: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="card">
+    <img src="pexels-photo-11958639.jpeg" alt="Card Image" class="card-img" />
+    <div class="card-content">
+      <h2 class="card-title">Clean Design</h2>
+      <p class="card-description">
+        This card component is fully responsive and has hover effects, shadows, and spacing built in.
+      </p>
+      <button class="card-btn">Learn More</button>
+    </div>
+  </section>
+
+</body>
+</html>

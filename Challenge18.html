@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feature Highlights</title>
+    <style>
+        .features {
+            display: flex;
+            background-color: #e0f7fa;
+            border-radius: 10px;
+            padding: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background-color: #00897b;
+            color: white;
+            border-radius: 10px;
+            flex: 1;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="features">
+        <div class="feature">
+            <div class="icon">🚀</div>
+            <h3>Fast Performance</h3>
+            <p>Experience lightning-fast load times and smooth interactions.</p>
+        </div>
+        <div class="feature">
+            <div class="icon">🔒</div>
+            <h3>Secure by Design</h3>
+            <p>Your data is protected with state-of-the-art encryption.</p>
+        </div>
+        <div class="feature">
+            <div class="icon">⚙️</div>
+            <h3>Customizable</h3>
+            <p>Tailor the experience to fit your workflow and needs.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

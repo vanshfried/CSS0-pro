@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .fancy-btn {
+      background-color: aqua;
+      color: brown;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid salmon;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, background-color 1s ease-in-out;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .fancy-btn:focus {
+      outline: 2px dashed darkblue;
+      outline-offset: 4px;
+    }
+
+    .fancy-btn:hover {
+      transform: scale(1.2);
+      background-color: red;
+      color: white;
+      transition: transform 0.5s ease-in-out,
+        background-color 1s ease-in-out;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+      text-shadow: 2px 2px rgb(0, 0, 0);
+    }
+
+    .fancy-btn:active {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="button-demo">
+    <button class="fancy-btn">Click Me</button>
+  </section>
+
+</body>
+
+</html>

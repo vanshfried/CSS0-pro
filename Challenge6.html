@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .team-section {
+        background-color: aqua;
+        padding: 10px;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+      }
+      .team-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+      .member-card {
+        padding: 10px;
+        border-radius: 10px;
+        flex: 1 1 200px; /* allows responsive growth */
+        transition: transform 0.2s ease-in-out;
+         margin: 5px;
+      }
+      .member-card:hover {
+        transform: scale(1.05);
+      }
+      .member-card:nth-child(1) {
+        background-color: pink;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .member-card:nth-child(2) {
+        background-color: bisque;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .member-card:nth-child(3) {
+        background-color: burlywood;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .member-card:nth-child(4) {
+        background-color: chocolate;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .member-card > h2 {
+        font-family: "Courier New", Courier, monospace;
+        margin-bottom: 5px;
+      }
+      .member-card > p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      @media screen and (max-width: 600px) {
+        .team-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="team-section">
+      <div class="team-header">
+        <h1>Meet Our Team</h1>
+        <p>We’re a bunch of passionate developers.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="member-card">
+          <h2>Alice</h2>
+          <p>UI Designer</p>
+        </div>
+        <div class="member-card">
+          <h2>Bob</h2>
+          <p>Frontend Developer</p>
+        </div>
+        <div class="member-card">
+          <h2>Charlie</h2>
+          <p>Backend Engineer</p>
+        </div>
+        <div class="member-card">
+          <h2>Dana</h2>
+          <p>QA Specialist</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

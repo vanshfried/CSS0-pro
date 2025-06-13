@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector Mastery</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: cornflowerblue;
+        box-sizing: border-box;
+      }
+      #main-header {
+        margin: 5px auto;
+        padding: 5px;
+        width: 200px;
+        background-color: antiquewhite;
+        text-align: center;
+      }
+      h1,
+      h2 {
+        font-family: "Courier New", Courier, monospace;
+      }
+      p {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .subtitle {
+        color: red;
+        font-size: large;
+        text-shadow: 1px 1px salmon;
+      }
+      .menu {
+        margin: 10px auto;
+        width: 200px;
+        padding: 5px;
+        background-color: rgb(167, 172, 172);
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 1px solid black;
+        border-radius: 15px;
+      }
+      .active {
+        color: rgb(255, 0, 0);
+      }
+      .content {
+        width: 200px;
+        margin: auto;
+        background-color: aqua;
+        text-align: center;
+        padding: 10px;
+      }
+      .divider {
+        height: 1px;
+        width: 100%;
+        background-color: chocolate;
+      }
+      article[data-type="primary"] {
+        background-color: lightyellow;
+      }
+      .content article p {
+        font-style: italic;
+      }
+      .content > article {
+        border: 1px solid navy;
+      }
+      h2 + p {
+        color: darkgreen;
+      }
+      a:hover {
+        background-color: lightcoral;
+      }
+      .menu a:nth-child(2) {
+        font-weight: bold;
+      }
+      h2::before {
+        content: "📰 ";
+      }
+    </style>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Welcome</h1>
+      <p class="subtitle">Mastering CSS Selectors</p>
+    </header>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#" class="active">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <section class="content">
+      <article data-type="primary">
+        <h2>Article 1</h2>
+        <p>This is my first article</p>
+      </article>
+      <div class="divider"></div>
+      <article data-type="secondary">
+        <h2>Article 2</h2>
+        <p>This is the second article.</p>
+      </article>
+    </section>
+    <footer>
+      <p>&copy; 2025 CSS World</p>
+    </footer>
+  </body>
+</html>

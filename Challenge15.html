@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Gallery</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+
+        }
+
+        @media (max-width:600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="gallery">
+        <img src="pexels-photo-11958639.jpeg" width="200" alt="Gallery Image 2" />
+        <img src="pexels-photo-15736980.png" width="200" alt="Gallery Image 1" />
+        <img src="pexels-photo-15736980.png" width="200" alt="Gallery Image 3" />
+        <img src="pexels-photo-11958639.jpeg" width="200" alt="Gallery Image 4" />
+        <img src="pexels-photo-11958639.jpeg" width="200" alt="Gallery Image 5" />
+        <img src="pexels-photo-15736980.png" width="200" alt="Gallery Image 6" />
+    </section>
+
+</body>
+
+</html>

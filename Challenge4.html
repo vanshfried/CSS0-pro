@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 4 - Updated</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Always good to include */
+      }
+      body {
+        background-color: #f0f0f0; /* subtle background to contrast card */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .bio-card {
+        width: 320px;
+        margin: 2rem auto;
+        background-color: rgba(6, 252, 59, 0.89);
+        text-align: start;
+        padding: 20px;
+        border-radius: 15px;
+        line-height: 1.6;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      h1 {
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+        font-weight: lighter;
+        font-style: italic;
+        word-spacing: 8px; /* reduced from 80px */
+        margin-bottom: 1rem;
+      }
+      h2 {
+        font-family: Impact, "Arial Narrow Bold", sans-serif;
+        text-align: right; /* 'right' is safer */
+        color: red;
+        font-size: 29px;
+        margin-bottom: 1rem;
+      }
+      .intro {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        letter-spacing: 2px; /* reduced from 5px */
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      blockquote {
+        font-style: italic;
+        font-weight: bold;
+        color: blue;
+        overflow: hidden;        /* necessary for text-overflow */
+        white-space: nowrap;     /* prevent wrapping */
+        text-overflow: ellipsis; /* the actual ellipsis */
+        margin-bottom: 1rem;
+        border-left: 4px solid blue;
+        padding-left: 10px;
+      }
+      .lang {
+        color: rgb(255, 166, 0);
+        font-size: 35px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        text-shadow: 2px 2px red;
+        white-space: nowrap; /* keep languages on single line */
+      }
+      .details {
+        text-transform: lowercase;
+        font-size: x-large;
+        margin-top: 1rem;
+      }
+      .location {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bio-card">
+      <h1>John Doe</h1>
+      <h2>Frontend Developer</h2>
+      <p class="intro">
+        Passionate about clean UI, scalable CSS, and writing accessible
+        front-end code. Loves dogs, clean code, and cold brew.
+      </p>
+      <blockquote>
+        “Code is like humor. When you have to explain it, it’s bad.”
+      </blockquote>
+      <p class="details">
+        Lives in <span class="location">jammu, India</span> | Speaks
+        <span class="lang">English</span>, <span class="lang">Hindi</span>
+      </p>
+    </div>
+  </body>
+</html>

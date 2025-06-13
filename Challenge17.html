@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonial Carousel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f4f8;
+      margin: 0;
+    }
+
+    .carousel {
+      width: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .testimonial {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .testimonial p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .testimonial h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: #111;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .controls button {
+      background-color: #ddd;
+      border: none;
+      padding: 8px 12px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <div class="carousel-track">
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/60?img=1" alt="User 1">
+      <h3>Jane Doe</h3>
+      <p>"This product changed my life! Highly recommend to everyone."</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/60?img=2" alt="User 2">
+      <h3>John Smith</h3>
+      <p>"Great service and fast support. Five stars!"</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/60?img=3" alt="User 3">
+      <h3>Emily Rose</h3>
+      <p>"Very intuitive and easy to use. A+ experience!"</p>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <button onclick="moveSlide(-1)">Prev</button>
+  <button onclick="moveSlide(1)">Next</button>
+</div>
+
+<script>
+  let index = 0;
+  const track = document.querySelector('.carousel-track');
+  const testimonials = document.querySelectorAll('.testimonial');
+
+  function moveSlide(step) {
+    index += step;
+    if (index < 0) index = testimonials.length - 1;
+    if (index >= testimonials.length) index = 0;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+</script>
+
+</body>
+</html>
